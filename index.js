@@ -30,9 +30,15 @@ console.log(guardians);
 function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
     // Your code here
+    createPlaylist = songs.map(songs => songs.genre)
+   
 }
-
+console.log(songs);
 // Call generatePlaylist and display the playlists for each Guardian
 generatePlaylist(guardians, songs);
+
+//Try Out Method
+//let actorNames = actorsList.map(actor => actor.name);
+//console.log(actorNames);
 
 
