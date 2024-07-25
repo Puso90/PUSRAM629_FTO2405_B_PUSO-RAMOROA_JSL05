@@ -12,7 +12,7 @@ const songs = [
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
     // Feel free to add even more songs
-];
+]; 
 
 
 // Object containing each Guardian's preferred genre
@@ -20,7 +20,11 @@ const guardians = {
     "Star-Lord": "Rock",
     "Gamora": "Pop",
     // Add preferences for Drax, Rocket, and Groot
+    "drax": "R&B",
+    "rocker": "Rock",
+    "groot": "Pop",
 };
+console.log(guardians);
 
 // Function to generate playlist based on preferred genre
 function generatePlaylist(guardians, songs) {
