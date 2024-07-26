@@ -57,21 +57,25 @@ console.log(playlistByGenre);
 
 };
 
-
 // Call generatePlaylist and display the playlists for each Guardian
 generatePlaylist(guardians, songs);
+
+
+//______________________________________________________________________________________________________________________________________________
+
 //Try Out Method
 //let actorNames = actorsList.map(actor => actor.name);
 //console.log(actorNames);
 
-/*
+/*______________________________________________________________________________________________________________________________________________
+
 3. **Generate Playlists**: Implement the `generatePlaylist` function. Use the `map()` function to create a personalized playlist for each Guardian based on their genre preference.
 4. **Display Playlists**: Dynamically create and append elements to the `#playlists` div to display each Guardian's playlist. Include the Guardian's name and their list of songs.
 */
 
- //Here I was trying to send plaaylist to html
- 
+//______________________________________________________________________________________________________________________________________________
 
+// I WAS VERY CLOSE HERE BEN ...
 
 /* Tried this and I was just confusing nyself
 const playlistByGenre = songs.map(songs => {
@@ -81,3 +85,8 @@ const playlistByGenre = songs.map(songs => {
     });
     console.log("Playlist by genre: " + generatePlaylist(guardians, songs));
 */
+
+//_____________________________________________________________________________________________________________________________________________
+
+// REFERENCE VIDEO THAT I USED...:
+// https://www.youtube.com/watch?v=-6cYQNY6rok
