@@ -27,7 +27,7 @@ const guardians = [
     {user: "Rocket", prefered: "Rock"},
     {user: "Groot", prefered: "Pop"}
 ];
-console.log(guardians);
+
 
 
 function generatePlaylist(guardians, songs) {
@@ -36,20 +36,17 @@ function generatePlaylist(guardians, songs) {
     //playlists.innerHTML = "";
 
     // This creates a portal to create a changed array 
-    const playlistByGenre = guardians.map(items => {
-      // This here leave room for entry within this array
-      const playlist = {};
-      // This matches selected items to an array
-      playlist[items.title] = items.genre;
-      // Brings back the array as programmed above
-      return playlist;
-
-    })
-
+    const playlistByGenre = guardians.map(guardians => {
+        const newPlaylist = songs.filter(song => song.genre === guardians.prefered);
+        return newPlaylist;
+      });
 console.log(playlistByGenre);
+    };
 
 
-};
+
+
+
 
 // Call generatePlaylist and display the playlists for each Guardian
 generatePlaylist(guardians, songs);
@@ -91,6 +88,13 @@ generatePlaylist(guardians, songs);
     3.  const songGenres = songs.map(playlist => playlist.genre)
         
     4.  const createPlaylist = guardians.map(newPlaylist => newPlaylist.prefered)
+
+    5.  const playlistByGenre = guardians.map(guardians => {
+        const newPlaylist = songs.filter(song => song.genre === guardians.prefered);
+        return newPlaylist;
+        });
+        console.log(playlistByGenre);
+        };
     
 */
 
