@@ -11,7 +11,6 @@ const songs = [
     { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
-    // Feel free to add even more songs
     { title: "Billie Jean", artist: "Michael Jackson", genre: "Pop"},
     { title: "U Got It Bad", artist: "Usher", genre: "R&B"},
     { title: "Pantsula 4 Life", artist: "Booga Luv", genre: "Kwaito"},
@@ -19,40 +18,35 @@ const songs = [
     { title: "Akekh'Ugogo", artist: "Mzekezeke", genre: "Kwaito"}
 ]; 
 
-
 // Object containing each Guardian's preferred genre
 
 const guardians = [
     {user: "Star-Lord", prefered: "Rock"},
     {user: "Gamora", prefered: "Pop"},
-    // Add preferences for Drax, Rocket, and Groot
     {user: "Drax", prefered: "R&B"},
     {user: "Rocket", prefered: "Rock"},
     {user: "Groot", prefered: "Pop"}
 ];
 console.log(guardians);
 
-// My playlist keeps generating forever!!! 
-// LORD HAVE MERCY.... It's finnally showing, just need to match it to guardians!!!!!!!
-// Function to generate playlist based on preferred genre
 
 function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
-    //const songGenres = songs.map(playlist => playlist.genre)
-    //const createPlaylist = guardians.map(newPlaylist => newPlaylist.prefered)
     const playlists = document.getElementById('#playlist');
     //playlists.innerHTML = "";
 
-    const playlistByGenre = songs.map(items => {
-      const container = {};
-
-      container[items.title] = items.genre;
-
-      return container;
+    // This creates a portal to create a changed array 
+    const playlistByGenre = guardians.map(items => {
+      // This here leave room for entry within this array
+      const playlist = {};
+      // This matches selected items to an array
+      playlist[items.title] = items.genre;
+      // Brings back the array as programmed above
+      return playlist;
 
     })
-console.log(playlistByGenre);
 
+console.log(playlistByGenre);
 
 
 };
@@ -61,32 +55,55 @@ console.log(playlistByGenre);
 generatePlaylist(guardians, songs);
 
 
+
+
+
+
+//______________________________________________________________________________________________________________________________________________
+// THOUGHTS/ COMMENTS:
+/* 
+
+      1.  Somehow, I still need to group the music to genres
+      2.  My playlist keeps generating forever!!! 
+      3.  LORD HAVE MERCY.... It's finnally showing, just need to match it to guardians!!!!!!!
+      4.  Function to generate playlist based on preferred genre
+
+*/
+
 //______________________________________________________________________________________________________________________________________________
 
-//Try Out Method
-//let actorNames = actorsList.map(actor => actor.name);
-//console.log(actorNames);
+//TRY OUT METHOD:
+/*
+    1.  let actorNames = actorsList.map(actor => actor.name);
+        console.log(actorNames);
 
-/*______________________________________________________________________________________________________________________________________________
+    2.  I WAS VERY CLOSE HERE BEN ...
+
+        Tried this and I was just confusing nyself
+        
+        const playlistByGenre = songs.map(songs => {
+        const  guardians = ["Star-Lord"];
+
+            guardians[songs.title] = songs.genre;
+        });
+        console.log("Playlist by genre: " + generatePlaylist(guardians, songs));
+
+    3.  const songGenres = songs.map(playlist => playlist.genre)
+        
+    4.  const createPlaylist = guardians.map(newPlaylist => newPlaylist.prefered)
+    
+*/
+
+//______________________________________________________________________________________________________________________________________________
+
+/* INSTRUCTIONS
 
 3. **Generate Playlists**: Implement the `generatePlaylist` function. Use the `map()` function to create a personalized playlist for each Guardian based on their genre preference.
 4. **Display Playlists**: Dynamically create and append elements to the `#playlists` div to display each Guardian's playlist. Include the Guardian's name and their list of songs.
+
 */
 
 //______________________________________________________________________________________________________________________________________________
 
-// I WAS VERY CLOSE HERE BEN ...
-
-/* Tried this and I was just confusing nyself
-const playlistByGenre = songs.map(songs => {
-      const  guardians = ["Star-Lord"];
-
-        guardians[songs.title] = songs.genre;
-    });
-    console.log("Playlist by genre: " + generatePlaylist(guardians, songs));
-*/
-
-//_____________________________________________________________________________________________________________________________________________
-
-// REFERENCE VIDEO THAT I USED...:
+// REFERENCE VIDEO THAT I USED...: MAP() METHOD
 // https://www.youtube.com/watch?v=-6cYQNY6rok
