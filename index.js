@@ -30,9 +30,7 @@ const guardians = [
 
 function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
-    
-    //playlists.innerHTML = "";
-    //playlistByGenre.appendChild
+            
     
 //Remeber to add map() along using by and container.length example for by: & artist:
     // This creates a portal to create a changed array 
@@ -41,6 +39,26 @@ function generatePlaylist(guardians, songs) {
         return newPlaylist;
     });
         console.log(playlistByGenre);
+
+
+        const playlist1 = document.getElementById('playlists');
+
+
+        
+            let userName = document.createElement('p');
+            userName.textContent = `${guardians.user} `;
+            playlist1.appendChild(userName);
+            
+/*
+            const playlist2 = document.getElementById('playlists');
+            let userName1 = document.createElement('p');
+            userName1.textContent = `${guardians.user}`;
+            playlist2.appendChild(userName1);  */
+        
+
+
+    //playlists.innerHTML = "";
+    //playlistByGenre.appendChild
         
 
 }
