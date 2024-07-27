@@ -21,6 +21,7 @@ const songs = [
 // Object containing each Guardian's preferred genre
 
 const guardians = [
+    // Turned then into objects inside array 
     {user: "Star-Lord", prefered: "Rock"},
     {user: "Gamora", prefered: "Pop"},
     {user: "Drax", prefered: "R&B"},
@@ -32,15 +33,17 @@ function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
             
     
-//Remeber to add map() along using by and container.length example for by: & artist:
+//Remeber to add map() along using by and container.length example for by: & artist: //SIDE NOTE*
     // This creates a portal to create a changed array 
         const playlistByGenre = guardians.map(guardians => {
+    // Here I'm filtering so that It does not give endless array like No.6 on comments
         const newPlaylist = songs.filter(song => song.genre === guardians.prefered);
+    // Bring me back the array I engineered with RETURN and stops map() function 
         return newPlaylist;
     });
         console.log(playlistByGenre);
 
-
+// SELECT .  CREATE  .  APPEND // TO HTML
         const playlist1 = document.getElementById('playlists');
 
 
@@ -48,18 +51,8 @@ function generatePlaylist(guardians, songs) {
             let userName = document.createElement('p');
             userName.textContent = `${guardians.user} `;
             playlist1.appendChild(userName);
-            
-/*
-            const playlist2 = document.getElementById('playlists');
-            let userName1 = document.createElement('p');
-            userName1.textContent = `${guardians.user}`;
-            playlist2.appendChild(userName1);  */
-        
 
 
-    //playlists.innerHTML = "";
-    //playlistByGenre.appendChild
-        
 
 }
 // Call generatePlaylist and display the playlists for each Guardian
@@ -83,7 +76,7 @@ generatePlaylist(guardians, songs);
 
 //______________________________________________________________________________________________________________________________________________
 
-//TRY OUT METHOD:
+//TRY OUT MAP() METHOD: COMMENTS
 /*
     1.  let actorNames = actorsList.map(actor => actor.name);
         console.log(actorNames);
@@ -121,8 +114,28 @@ generatePlaylist(guardians, songs);
 
         return container;
     })
-    
 */
+
+//______________________________________________________________________________________________________________________________________________
+//TRY OUT APPENDING TO HTML 
+    
+    /*
+            const playlist2 = document.getElementById('playlists');
+            let userName1 = document.createElement('p');
+            userName1.textContent = `${guardians.user}`;
+            playlist2.appendChild(userName1);  
+        
+            //playlists.innerHTML = "";
+            //playlistByGenre.appendChild
+
+
+
+
+
+
+
+    */
+
 
 //______________________________________________________________________________________________________________________________________________
 
