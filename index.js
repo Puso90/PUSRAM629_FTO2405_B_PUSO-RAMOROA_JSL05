@@ -28,26 +28,22 @@ const guardians = [
     {user: "Groot", prefered: "Pop"}
 ];
 
-
-
 function generatePlaylist(guardians, songs) {
     // Use the map() function to create playlists for each Guardian
-    const playlists = document.getElementById('#playlist');
+    
     //playlists.innerHTML = "";
-
+    //playlistByGenre.appendChild
+    
+//Remeber to add map() along using by and container.length example for by: & artist:
     // This creates a portal to create a changed array 
-    const playlistByGenre = guardians.map(guardians => {
+        const playlistByGenre = guardians.map(guardians => {
         const newPlaylist = songs.filter(song => song.genre === guardians.prefered);
         return newPlaylist;
-      });
-console.log(playlistByGenre);
-    };
+    });
+        console.log(playlistByGenre);
+        
 
-
-
-
-
-
+}
 // Call generatePlaylist and display the playlists for each Guardian
 generatePlaylist(guardians, songs);
 
@@ -95,6 +91,18 @@ generatePlaylist(guardians, songs);
         });
         console.log(playlistByGenre);
         };
+
+    6.  const tracksByGenre = songs.map(songList => songList.genre);
+        const songsSelected = songs.filter(song => song.genre === guardians.prefered);
+        const playlistByGenre = guardians.map(items => {
+        const container = {};
+
+        container[items.user] = items.prefered;
+        container.songPrefered = tracksByGenre;
+        container.songByGenre = songsSelected;
+
+        return container;
+    })
     
 */
 
